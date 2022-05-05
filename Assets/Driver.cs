@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Driver : MonoBehaviour
 {
+    [SerializeField] float steerSpeed = 1f;
+    [SerializeField] float moveSpeed = 0.01f;
     void Start()
     {
-        // we are going into the transform for the Driver, which is the car, and we are accessing its rotattion property
-        // it takes its 3 values - x, y, z
 
     }
 
     void Update()
     {
-        transform.Rotate(0, 0, 0.1f);
-        transform.Translate(0, 0.01f, 0);
+        float steerAmount = Input.GetAxis("Horizontal") * steerSpeed * Time.deltaTime;
+        float moveAmount = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        transform.Rotate(0, 0, -steerAmount);
+        transform.Translate(0, moveAmount, 0);
     }
 }
