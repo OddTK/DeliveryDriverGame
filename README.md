@@ -1,4 +1,4 @@
-# DeliveryDriverGame
+# 2D Delivery Driver Game
 
 ## Game Mechanics:
 - Driving car forwards and backwards
