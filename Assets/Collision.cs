@@ -8,4 +8,5 @@ public class Collision : MonoBehaviour
     {
         Debug.Log("Ow! That really hurt Charlie..");
     }
+    
 }
