@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("We got something!");
+    void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("What was that!");
     }
 }
